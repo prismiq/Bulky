@@ -1,0 +1,33 @@
+@model List<Product>
+<div class="container">
+    <div class="row pt-4">
+        <div class="col-6 pb-2">
+            <h1>Category List</h1>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-controller="Product" asp-action="Create" class="btn-primary btn">
+                Add Product
+            </a>
+        </div>
+    </div>
+</div>
+<table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Display Order</th>
+    </tr>
+    </thead>
+    <tbody>
+        @foreach(var obj in Model) {
+    <tr>
+        <td>@obj.Title</td>
+        <td>@obj.Price</td> 
+        <td>
+            <a asp-controller="Product" asp-action="Edit" asp-route-id="@obj.Id" class="btn btn-primary">Edit</a>
+            <a asp-controller="Product" asp-action="Delete" asp-route-id="@obj.Id"  class="btn btn-danger">Delete</a>
+        </td>
+    </tr>
+    }
+    </tbody>
+</table>
