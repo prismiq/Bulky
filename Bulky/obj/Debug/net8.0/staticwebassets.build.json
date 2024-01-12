@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "TSqhq3NPeE5aIlqSZyAZgHzz5oMlYCyjYUKptcXbXrs=",
+  "Hash": "89ESIXbppnUvOTu1x7UUc6sbXDwb6kFYotTBDjdRwfM=",
   "Source": "Bulky",
   "BasePath": "_content/Bulky",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/Users/admin/Desktop/Bulky/Bulky/wwwroot/images/product/4d4fbe3d-9d52-43d8-96b1-4aadbcec153e.jpeg",
+      "SourceId": "Bulky",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/admin/Desktop/Bulky/Bulky/wwwroot/",
+      "BasePath": "_content/Bulky",
+      "RelativePath": "images/product/4d4fbe3d-9d52-43d8-96b1-4aadbcec153e.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/product/4d4fbe3d-9d52-43d8-96b1-4aadbcec153e.jpeg"
     },
     {
       "Identity": "/Users/admin/Desktop/Bulky/Bulky/wwwroot/js/site.js",
