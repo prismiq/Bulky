@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "g6p7fpZF40tMCpA4zQKB2kZ05n1xwNd/gCXTg02sW3A=",
+  "Hash": "U3l3AThyfytxxEOTN4sGbQEzro+v2Hsm6sPjxUCi4Xw=",
   "Source": "Bulky",
   "BasePath": "_content/Bulky",
   "Mode": "Default",
@@ -1383,6 +1383,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/product/e2cccecf-0621-468c-9722-1943ff38fd33.jpeg"
+    },
+    {
+      "Identity": "/Users/admin/Desktop/Bulky/Bulky/wwwroot/js/company.js",
+      "SourceId": "Bulky",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/admin/Desktop/Bulky/Bulky/wwwroot/",
+      "BasePath": "_content/Bulky",
+      "RelativePath": "js/company.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/js/company.js"
     },
     {
       "Identity": "/Users/admin/Desktop/Bulky/Bulky/wwwroot/js/product.js",

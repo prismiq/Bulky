@@ -25,6 +25,36 @@ namespace Bulky.Data
         {
             base.OnModelCreating(modelBuilder);
             
+            modelBuilder.Entity<Company>().HasData(
+                new Company {
+                    Id = 5,
+                    Name = "Tech Solutions",
+                    StreetAddress = "123 Test St",
+                    City = "Tech City",
+                    PostalCode = "N1 GUU",
+                    State = "IL",
+                    PhoneNumber = "123232323"
+                },
+                new Company {
+                    Id = 6,
+                    Name = "Ready Solutions",
+                    StreetAddress = "123 Test St",
+                    City = "Tech City",
+                    PostalCode = "N1 GUU",
+                    State = "IL",
+                    PhoneNumber = "123232323"
+                },
+                new Company {
+                    Id = 7,
+                    Name = "Book Solutions",
+                    StreetAddress = "123 Test St",
+                    City = "Tech City",
+                    PostalCode = "N1 GUU",
+                    State = "IL",
+                    PhoneNumber = "123232323"
+                }
+            );
+
             modelBuilder.Entity<Category>().HasData(
                 new Category {
                     Id = 1,

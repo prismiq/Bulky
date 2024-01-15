@@ -1,110 +1,97 @@
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Net.Sockets;
-using System.Threading.Tasks;
-using Bulky.Data;
 using Bulky.Models;
-using Bulky.Repository;
 using Bulky.Repository.IRepository;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Collections.Generic;
+using System.Data;
 
-namespace Bulky.Controllers
+namespace BulkyBookWeb.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize(Roles = SD.Role_Admin)]
+    //[Authorize(Roles = SD.Role_Admin)]
     public class CompanyController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
-        public CompanyController(IUnitOfWork unitOfWork) {
+        public CompanyController(IUnitOfWork unitOfWork)
+        {
             _unitOfWork = unitOfWork;
         }
-
-        public IActionResult Index()
+        public IActionResult Index() 
         {
-            List<Company> objCategoryList = _unitOfWork.Company.GetAll().ToList();
-            return View(objCategoryList);
-        }
-        
-        public IActionResult Create() {
-            return View();
+            List<Company> objCompanyList = _unitOfWork.Company.GetAll().ToList();
+           
+            return View(objCompanyList);
         }
 
-        [HttpPost]
-        public IActionResult Create(Category obj) {
-
-            if (obj.Name == obj.DisplayOrder.ToString()) {
-                ModelState.AddModelError("Name", "Dislay order cannot be the same as name");
+        public IActionResult Upsert(int? id)
+        {
+           
+            if (id == null || id == 0)
+            {
+                //create
+                return View(new Company());
             }
-            if (ModelState.IsValid) {
-                _unitOfWork.Category.Add(obj);
-                _unitOfWork.Save();
-
-                TempData["Success"] = "Category created successfully";
-                return RedirectToAction("Index","Category");
+            else
+            {
+                //update
+                Company companyObj = _unitOfWork.Company.Get(u=>u.Id==id);
+                return View(companyObj);
             }
-            return View();
-        }
-
-
-        public IActionResult Edit(int? id) {
-
-            if (id == null || id == 0) {
-                return NotFound();
-            }
-
-            Category categoryFromDb = _unitOfWork.Category.Get(u=> u.Id == id);
-            if (categoryFromDb == null) {
-                return NotFound();
-            }
-
-            return View(categoryFromDb);
-        }
-
-         [HttpPost]
-        public IActionResult Edit(Category obj) {
-
-            if (ModelState.IsValid) {
-                _unitOfWork.Category.Update(obj);
-                _unitOfWork.Save();
-
-                TempData["Success"] = "Category Edited successfully";
-                return RedirectToAction("Index","Category");
-            }
-            return View();
-        }
-
-         public IActionResult Delete(int? id) {
-
-            if (id == null || id == 0) {
-                return NotFound();
-            }
-
-            Category categoryFromDb = _unitOfWork.Category.Get(u=> u.Id == id);
-            if (categoryFromDb == null) {
-                return NotFound();
-            }
-
-            return View(categoryFromDb);
-        }
-
-        [HttpPost, ActionName("Delete")]
-        public IActionResult DeletePOST(int? id) {
             
-            Category? obj = _unitOfWork.Category.Get(u=> u.Id == id);
+        }
+        [HttpPost]
+        public IActionResult Upsert(Company CompanyObj)
+        {
+            if (ModelState.IsValid)
+            {
+                
+                if (CompanyObj.Id == 0)
+                {
+                    _unitOfWork.Company.Add(CompanyObj);
+                }
+                else
+                {
+                    _unitOfWork.Company.Update(CompanyObj);
+                }
+                
+                _unitOfWork.Save();
+                TempData["success"] = "Company created successfully";
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                
+                return View(CompanyObj);
+            }
+        }
 
-            if (obj == null) {
-                NotFound();
+
+        #region API CALLS
+
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            List<Company> objCompanyList = _unitOfWork.Company.GetAll().ToList();
+            return Json(new { data = objCompanyList });
+        }
+
+
+        [HttpDelete]
+        public IActionResult Delete(int? id)
+        {
+            var CompanyToBeDeleted = _unitOfWork.Company.Get(u => u.Id == id);
+            if (CompanyToBeDeleted == null)
+            {
+                return Json(new { success = false, message = "Error while deleting" });
             }
 
-            _unitOfWork.Category.Remove(obj);
+            _unitOfWork.Company.Remove(CompanyToBeDeleted);
             _unitOfWork.Save();
-            TempData["Success"] = "Category Deleted successfully";
 
-            return RedirectToAction("Index");
+            return Json(new { success = true, message = "Delete Successful" });
         }
+
+        #endregion
     }
 }

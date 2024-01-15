@@ -45,6 +45,10 @@
       "PackagePath": "staticwebassets/images/product/e2cccecf-0621-468c-9722-1943ff38fd33.jpeg"
     },
     {
+      "Id": "/Users/admin/Desktop/Bulky/Bulky/wwwroot/js/company.js",
+      "PackagePath": "staticwebassets/js/company.js"
+    },
+    {
       "Id": "/Users/admin/Desktop/Bulky/Bulky/wwwroot/js/product.js",
       "PackagePath": "staticwebassets/js/product.js"
     },
