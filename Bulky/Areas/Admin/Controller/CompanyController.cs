@@ -16,16 +16,16 @@ namespace Bulky.Controllers
 {
     [Area("Admin")]
     [Authorize(Roles = SD.Role_Admin)]
-    public class CategoryController : Controller
+    public class CompanyController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
-        public CategoryController(IUnitOfWork unitOfWork) {
+        public CompanyController(IUnitOfWork unitOfWork) {
             _unitOfWork = unitOfWork;
         }
 
         public IActionResult Index()
         {
-            List<Category> objCategoryList = _unitOfWork.Category.GetAll().ToList();
+            List<Company> objCategoryList = _unitOfWork.Company.GetAll().ToList();
             return View(objCategoryList);
         }
         

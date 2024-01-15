@@ -1,7 +1,8 @@
 namespace Bulky.Repository.IRepository {
     public interface IUnitOfWork {
-        ICategoryRepository Category {get; }
-        IProductRepository Product {get; }
+        ICategoryRepository Category {get;}
+        IProductRepository Product {get;}
+        ICompanyRepository Company {get;}
 
         void Save();
     }

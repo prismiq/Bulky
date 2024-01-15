@@ -1,0 +1,21 @@
+@model List<Company>
+<div class="container">
+    <div class="row pt-4">
+        <div class="col-6 pb-2">
+            <h1>Category List</h1>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-controller="Company" asp-action="Create" class="btn-primary btn">
+                Add Company
+            </a>
+        </div>
+    </div>
+</div>
+<table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Display Order</th>
+    </tr>
+    </thead>
+</table>

@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using Bulky.Utility
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -35,12 +37,14 @@
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Dropdown
                             </a>
+                            @if(User.IsInRole(SD.Role_Admin)) {
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" asp-area="Admin" asp-controller="Product" asp-action="Index">Product</a></li>
                                 <li><a class="dropdown-item" asp-area="Admin" asp-controller="Category" asp-action="Index">Category</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
+                            }
                         </li>
                     </ul>
                     <partial name="_LoginPartial" />
