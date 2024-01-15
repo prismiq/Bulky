@@ -21,6 +21,8 @@ namespace Bulky.Data
         public DbSet<ApplicationUser> ApplicationUsers {get; set;}
         public DbSet<Company> Company {get; set;}
 
+        public DbSet<ShoppingCart> ShoppingCarts {get; set;}
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
