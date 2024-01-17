@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace Bulky.Models
 {
-    public class ShoppingCartVM
+    public class OrderVM
     {
-        public IEnumerable<ShoppingCart> ShoppingCartList { get; set; }
         public OrderHeader OrderHeader { get; set; }
+        public IEnumerable<OrderDetail> OrderDetail { get; set; }
     }
 }

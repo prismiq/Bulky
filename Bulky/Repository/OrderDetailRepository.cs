@@ -1,6 +1,7 @@
-﻿using BulkyBook.DataAccess.Repository.IRepository;
-using BulkyBook.DataAcess.Data;
-using BulkyBook.Models;
+﻿using Bulky.Data;
+using Bulky.Models;
+using Bulky.Repository;
+using BulkyBook.DataAccess.Repository.IRepository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,15 +11,12 @@ using System.Threading.Tasks;
 
 namespace BulkyBook.DataAccess.Repository
 {
-    public class OrderDetailRepository : Repository<OrderDetail>, IOrderDetailRepository
-    {
+    public class OrderDetailRepository : Repository<OrderDetail>, IOrderDetailRepository {
         private ApplicationDbContext _db;
         public OrderDetailRepository(ApplicationDbContext db) : base(db)
         {
             _db = db;
         }
-
-        
 
         public void Update(OrderDetail obj)
         {

@@ -26,7 +26,7 @@ namespace Bulky.Repository
             dbSet.Add(entity);
         }
 
-        public T Get(Expression<Func<T, bool>> filter, string? includeProperties = null)
+        public T Get(Expression<Func<T, bool>>? filter = null, string? includeProperties = null)
         {
             IQueryable<T> query = dbSet;
             query = query.Where(filter);
@@ -39,7 +39,7 @@ namespace Bulky.Repository
             return query.FirstOrDefault();
         }
 
-        public IEnumerable<T> GetAll(Expression<Func<T, bool>>? filter, string? includeProperties = null)
+        public IEnumerable<T> GetAll(Expression<Func<T, bool>>? filter = null, string? includeProperties = null)
         {
             IQueryable<T> query = dbSet;
             if (!string.IsNullOrEmpty(includeProperties)) {
