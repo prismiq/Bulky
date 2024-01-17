@@ -63,6 +63,8 @@ public class HomeController : Controller
             _unitOfWork.ShoppingCart.Add(shoppingCart);
         }
 
+        TempData["success"] = "Updated cart successfully";
+
         return RedirectToAction(nameof(Index));
     }
 
