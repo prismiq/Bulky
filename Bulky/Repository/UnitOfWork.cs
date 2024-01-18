@@ -5,7 +5,9 @@ using System.Threading.Tasks;
 using Bulky.Data;
 using Bulky.Models;
 using Bulky.Repository.IRepository;
+using BulkyBook.DataAccess.Repository;
 using BulkyBook.DataAccess.Repository.IRepository;
+using NuGet.Protocol.Plugins;
 
 namespace Bulky.Repository
 {
@@ -17,6 +19,8 @@ namespace Bulky.Repository
         public ICompanyRepository Company {get; set;}
         public IShoppingCartRepository ShoppingCart {get; set;}
         public IApplicationUserRepository ApplicationUser { get; private set; }
+        public IOrderHeaderRepository OrderHeader { get; private set; }
+        public IOrderDetailRepository OrderDetail { get; private set; }
         public UnitOfWork(ApplicationDbContext db) {
             _db = db;
             Category = new CategoryRepository(_db); 
@@ -24,6 +28,8 @@ namespace Bulky.Repository
             Company = new CompanyRepository(_db);
             ShoppingCart = new ShoppingCartRepository(_db);
             ApplicationUser = new ApplicationUserRepository(_db);
+            OrderDetail = new OrderDetailRepository(_db);
+            OrderHeader = new OrderHeaderRepository(_db);
         }
         
         public void Save() {

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "U3l3AThyfytxxEOTN4sGbQEzro+v2Hsm6sPjxUCi4Xw=",
+  "Hash": "29UmjWwzCmDh4evif+aggLa3N/HNp6hDtfrYSIYJsiI=",
   "Source": "Bulky",
   "BasePath": "_content/Bulky",
   "Mode": "Default",
@@ -1383,6 +1383,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/product/e2cccecf-0621-468c-9722-1943ff38fd33.jpeg"
+    },
+    {
+      "Identity": "/Users/admin/Desktop/Bulky/Bulky/wwwroot/images/product/fa070656-daee-4943-9597-b2b23b016b3f.jpg",
+      "SourceId": "Bulky",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/admin/Desktop/Bulky/Bulky/wwwroot/",
+      "BasePath": "_content/Bulky",
+      "RelativePath": "images/product/fa070656-daee-4943-9597-b2b23b016b3f.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/product/fa070656-daee-4943-9597-b2b23b016b3f.jpg"
     },
     {
       "Identity": "/Users/admin/Desktop/Bulky/Bulky/wwwroot/js/company.js",
