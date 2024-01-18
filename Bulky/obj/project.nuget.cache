@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "hP+dzpILQ6vPf/LhF8Fnu8W51E8Ah1CngJ1Rjp7wfuByUSlTSKrKRmCiiGepZLoktSn4+j/VE9hbcULKIQR6Lg==",
+  "dgSpecHash": "H0b3hF8bXuS5b+orbiKjNcMC6nOLcrBrblL+M3EOyAt4EM892tKAGhRF8YOug2XLwcHE2eRWGn8zZ5pVWnw72A==",
   "success": true,
   "projectFilePath": "/Users/admin/Desktop/Bulky/Bulky/Bulky.csproj",
   "expectedPackageFiles": [
@@ -139,6 +139,7 @@
     "/Users/admin/.nuget/packages/sqlitepclraw.core/2.1.6/sqlitepclraw.core.2.1.6.nupkg.sha512",
     "/Users/admin/.nuget/packages/sqlitepclraw.lib.e_sqlite3/2.1.6/sqlitepclraw.lib.e_sqlite3.2.1.6.nupkg.sha512",
     "/Users/admin/.nuget/packages/sqlitepclraw.provider.e_sqlite3/2.1.6/sqlitepclraw.provider.e_sqlite3.2.1.6.nupkg.sha512",
+    "/Users/admin/.nuget/packages/stripe.net/43.10.0/stripe.net.43.10.0.nupkg.sha512",
     "/Users/admin/.nuget/packages/system.codedom/5.0.0/system.codedom.5.0.0.nupkg.sha512",
     "/Users/admin/.nuget/packages/system.collections.immutable/7.0.0/system.collections.immutable.7.0.0.nupkg.sha512",
     "/Users/admin/.nuget/packages/system.composition/7.0.0/system.composition.7.0.0.nupkg.sha512",

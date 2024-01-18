@@ -286,3 +286,4 @@
 /Users/admin/Desktop/Bulky/Bulky/bin/Debug/net8.0/Microsoft.AspNetCore.Identity.UI.dll
 /Users/admin/Desktop/Bulky/Bulky/bin/Debug/net8.0/Microsoft.Extensions.FileProviders.Embedded.dll
 /Users/admin/Desktop/Bulky/Bulky/obj/Debug/net8.0/Bulky.MvcApplicationPartsAssemblyInfo.cs
+/Users/admin/Desktop/Bulky/Bulky/bin/Debug/net8.0/Stripe.net.dll
