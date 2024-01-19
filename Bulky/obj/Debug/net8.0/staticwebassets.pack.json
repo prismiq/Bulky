@@ -53,6 +53,10 @@
       "PackagePath": "staticwebassets/js/company.js"
     },
     {
+      "Id": "/Users/admin/Desktop/Bulky/Bulky/wwwroot/js/order.js",
+      "PackagePath": "staticwebassets/js/order.js"
+    },
+    {
       "Id": "/Users/admin/Desktop/Bulky/Bulky/wwwroot/js/product.js",
       "PackagePath": "staticwebassets/js/product.js"
     },
